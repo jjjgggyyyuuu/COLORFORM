@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gray-50;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom Styling */
+.gradient-bg {
+  @apply bg-gradient-to-br from-blue-50 to-purple-50;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-card overflow-hidden;
+}
+
+.input-field {
+  @apply block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary;
+}
+
+.select-field {
+  @apply block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary;
+}
+
+.btn {
+  @apply px-4 py-2 font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-dark text-white focus:ring-primary;
+}
+
+.btn-secondary {
+  @apply bg-secondary hover:bg-secondary-dark text-white focus:ring-secondary;
+}
+
+.btn-success {
+  @apply bg-success hover:bg-success/90 text-white focus:ring-success;
+}
+
+.btn-warning {
+  @apply bg-warning hover:bg-warning/90 text-white focus:ring-warning;
+}
+
+.btn-danger {
+  @apply bg-danger hover:bg-danger/90 text-white focus:ring-danger;
+}
+
+.btn-outline {
+  @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-gray-500;
+}
+
+.section-heading {
+  @apply text-xl font-bold text-gray-900 mb-4;
+}
+
+.subsection-heading {
+  @apply text-lg font-semibold text-gray-800 mb-3;
+}
+
+.pill {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.pill-primary {
+  @apply bg-primary/10 text-primary-dark;
+}
+
+.pill-success {
+  @apply bg-success/10 text-success;
+}
+
+.pill-warning {
+  @apply bg-warning/10 text-warning;
+}
+
+.pill-info {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.form-hint {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+.form-error {
+  @apply mt-1 text-sm text-danger;
+} 

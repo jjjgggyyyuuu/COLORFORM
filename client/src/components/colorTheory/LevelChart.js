@@ -155,9 +155,10 @@ const LevelChart = () => {
           To neutralize unwanted undertones, use these complementary colors:
         </p>
         <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li><span className="font-medium text-blue-700">Blue/Ash tones</span> neutralize <span className="font-medium text-orange-600">orange</span> (levels 6-7)</li>
-          <li><span className="font-medium text-purple-700">Violet tones</span> neutralize <span className="font-medium text-yellow-600">yellow</span> (levels 8-10)</li>
           <li><span className="font-medium text-green-700">Green tones</span> neutralize <span className="font-medium text-red-600">red</span> (levels 4-5)</li>
+          <li><span className="font-medium text-blue-700">Blue/Ash tones</span> neutralize <span className="font-medium text-orange-600">orange</span> (levels 6-7)</li>
+          <li><span className="font-medium text-indigo-700">Blue-violet tones</span> neutralize <span className="font-medium text-yellow-600">yellow-orange</span> (level 8)</li>
+          <li><span className="font-medium text-purple-700">Violet tones</span> neutralize <span className="font-medium text-yellow-600">yellow</span> (levels 9-10)</li>
         </ul>
       </div>
       

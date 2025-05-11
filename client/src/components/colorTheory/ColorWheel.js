@@ -85,25 +85,27 @@ const ColorWheel = () => {
   return (
     <div className="card p-6">
       <h2 className="section-heading">Hair Color Wheel</h2>
-      <p className="mb-4 text-gray-600">The color wheel shows complementary colors that neutralize each other. Click on a color to see what it neutralizes.</p>
+      <p className="mb-4 text-gray-600">
+        The color wheel shows complementary colors that neutralize each other. In hair coloring, we use the opposite (complementary) color to neutralize unwanted tones. Colors directly across from each other on the wheel cancel each other out.
+      </p>
       <div className="max-w-2xl mx-auto">
         <canvas ref={chartRef} height="400"></canvas>
       </div>
       
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-green-50 p-4 rounded-lg">
+          <h3 className="subsection-heading text-green-800">Green</h3>
+          <p>Neutralizes red tones, commonly found in level 4-5 hair when lifted. Used when dealing with red undertones or brassiness in darker hair.</p>
+        </div>
+        
         <div className="bg-blue-50 p-4 rounded-lg">
           <h3 className="subsection-heading text-blue-800">Blue/Ash</h3>
-          <p>Neutralizes orange tones, commonly found in level 6-7 hair when lifted.</p>
+          <p>Neutralizes orange tones, commonly found in level 6-7 hair when lifted. Essential for counteracting warmth in medium-blonde results.</p>
         </div>
         
         <div className="bg-purple-50 p-4 rounded-lg">
           <h3 className="subsection-heading text-purple-800">Violet</h3>
-          <p>Neutralizes yellow tones, commonly found in level 8-10 hair when lifted.</p>
-        </div>
-        
-        <div className="bg-green-50 p-4 rounded-lg">
-          <h3 className="subsection-heading text-green-800">Green</h3>
-          <p>Neutralizes red tones, commonly found in level 4-5 hair when lifted.</p>
+          <p>Neutralizes yellow tones, commonly found in level 8-10 hair when lifted. Crucial for creating cool blonde results without brassiness.</p>
         </div>
       </div>
     </div>

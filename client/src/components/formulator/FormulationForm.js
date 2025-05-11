@@ -156,6 +156,25 @@ const FormulationForm = ({ onFormulationCreated }) => {
     }
   };
 
+  // Get the appropriate corrective tone based on underlying pigment
+  const getCorrectiveColorForPigment = (underlyingPigment) => {
+    switch(underlyingPigment) {
+      case 'Red-brown':
+      case 'Red':
+        return { name: 'Green Corrector', code: 'Green', tone: 'green' };
+      case 'Red-orange':
+      case 'Orange':
+        return { name: 'Blue Corrector', code: 'Blue', tone: 'blue' };
+      case 'Yellow-orange':
+        return { name: 'Blue-Violet Corrector', code: 'BV', tone: 'blue-violet' };
+      case 'Yellow':
+      case 'Pale yellow':
+        return { name: 'Violet Corrector', code: 'Violet', tone: 'violet' };
+      default:
+        return { name: 'Ash Corrector', code: 'Ash', tone: 'ash' };
+    }
+  };
+
   // Generate mock formulation data when API fails
   const generateMockFormulation = (formData) => {
     const brand = brands.find(b => b._id === formData.brandId);
@@ -179,6 +198,9 @@ const FormulationForm = ({ onFormulationCreated }) => {
     else if (levelDifference === 3) developer = 30;
     else if (levelDifference >= 4) developer = 40;
     
+    // Get the appropriate corrective color
+    const correctiveColor = getCorrectiveColorForPigment(underlyingPigment);
+    
     return {
       startingLevel: formData.startingLevel,
       startingTone: formData.startingTone,
@@ -200,10 +222,10 @@ const FormulationForm = ({ onFormulationCreated }) => {
         correctiveColors: isLifting ? [
           {
             colorId: {
-              name: 'Corrective Tone',
-              code: formData.desiredTone === 'ash' ? 'Blue' : 'Violet',
+              name: correctiveColor.name,
+              code: correctiveColor.code,
               level: 0,
-              tone: formData.desiredTone === 'ash' ? 'blue' : 'violet'
+              tone: correctiveColor.tone
             },
             amount: 0.5,
             unit: 'oz',

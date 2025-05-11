@@ -94,6 +94,7 @@ const getCorrectiveTone = (underlyingPigment) => {
     case 'Orange':
       return 'blue'; // Blue/Ash neutralizes orange
     case 'Yellow-orange':
+      return 'blue-violet'; // Blue-violet neutralizes yellow-orange
     case 'Yellow':
     case 'Pale yellow':
       return 'violet'; // Violet neutralizes yellow
